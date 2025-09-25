@@ -1,0 +1,62 @@
+.center-text {
+    text-align: center;
+}
+
+.center-screen{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;        /* <-- stacks vertically (text above bar) */
+  align-items: center;           /* horizontal center */
+  justify-content: center;
+  background: #000;      
+}
+
+.hacker-box h2{
+  margin-bottom: 0px;  
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-align: center;
+  color: #00ef00; 
+  padding-bottom: -50px;
+}
+
+.hacker-box{
+  width: min(90vw, 700px);       /* not full width */
+  padding: 80px;
+  border: 5px solid #00ef00;
+  background:#000;
+  color:#00ef00;
+  font-family: ui-monospace, Menlo, Consolas, monospace;
+
+  /* stack title above bar & center them */
+  display: flex;
+  flex-direction: column;        /* <-- stacks vertically (text above bar) */
+  align-items: center;           /* horizontal center */
+  justify-content: center;       /* vertical center */
+  gap: 10px;    
+}
+
+.hacker-progress{
+  width:500px;
+  height:15px;
+  background:#000000;           
+  border:1px solid #00e400;
+  border-radius:900px;
+  padding:3px;                   
+  overflow:auto;
+}
+
+.hacker-bar{
+  height:100%;
+  width:0%;
+  background:#00e400;            
+  border-radius:inherit;
+  animation: load 4s ease-in-out 1 forwards; 
+}
+
+@keyframes load{
+  0%{width:0%}
+  50%{width:85%}
+  100%{width:100%}
+}
+

@@ -1,0 +1,111 @@
+
+:root{
+  --neon:#00ef00;
+}
+
+/* Top navigation bar */
+.nav-bar{
+    height: 45px;
+    border: 2px solid var(--neon);
+    border-radius: 10px; 
+    position: sticky;           /* stays at top while scrolling */
+    top: 10px;                   /* 10px from top of page */                       
+    display: flex;
+    justify-content: center;    /* center buttons on page */
+    gap: 50px;                  /* gap between buttons */
+    padding: 10px;              /*space around buttons */
+    z-index: 10;                /* stay on top of other content */
+    background:#000000;       /* black backround */
+    border: 2px solid var(--neon);      
+    box-shadow: 0 0 30px rgba(0,255,0,0.5);
+}
+
+/* Buttons */
+.nav-bar a{
+  display: inline-flex;
+  align-items: center;
+  height: 40px;
+  padding: 0 10px;                  /*distance from text to edge of button */
+  border-radius: 10px;              /* rounded corners */
+  border: 1px solid transparent;    /* border color on hover */    
+  color: var(--neon);               /* neon green text */
+  background: transparent;          /* transparent background instead of setting to black */
+  text-decoration: none;            /* remove underline */
+  font: 600 14px/1 "Orbitron", system-ui, sans-serif;
+  letter-spacing: .05em;
+   
+}
+
+.nav-bar a:hover,
+.nav-bar a:focus{ 
+  outline: 2px solid var(--neon);             /* outline on hover */
+  box-shadow: 0 0 10px rgba(0,239,0,.5);    /* glow effect on hover */
+  background: #072d07;                      /* fill in button on hover */
+}
+
+/* when on current page */
+.nav-bar a.active{
+  background: #072d07;            /* fill in button when on said page */
+  border-color: var(--neon);
+}
+
+.wrap{
+  display: flex;
+  flex-wrap: wrap;             /* allow wrapping */
+}
+
+.container-1{
+    display: grid;                      /* use grid layout */
+    grid-template-columns: 1fr 450px;     /* left col | right col */
+    grid-template-rows: auto 1fr;        /* top row | bottom row */    
+
+    height: auto;           /* height of screen */
+    width: auto;            /* width of screen */         
+
+    padding: 50px;          /* space between border & content */
+    margin: 50px;           /* space outside border */  
+    
+    border-radius: 20px;     /* rounded corners */         
+    background: #131313;  
+    box-shadow: 0 0 30px rgba(0,255,0,0.5);
+}
+
+.container-1 h1{
+    grid-column: 1; 
+    grid-row: 1;            /* put <h1> in left column */
+    justify-self: center;   /* align in center column */
+    align-self: start;      /* align to top of row */
+    margin-bottom: 20px;    /* space below heading */
+    
+    color: var(--neon);
+    font: 40px "Orbitron", system-ui, sans-serif;
+    letter-spacing: .2em;
+}
+
+.container-1 p{
+    grid-column: 1;         /* put <p> in left column */
+    grid-row: 2;            /* put <p> in 2nd row */
+    justify-self: left;    /* align to left of column */
+    align-self: start;      /* align to top of row */
+    margin-right: 50px;
+          
+    color: rgba(0,255,0,0.5);
+    font: 30px "times new roman", serif;
+    letter-spacing: .05em;
+
+}
+
+.container-1 img {
+    grid-column: 2;         /* put image in right column */
+    grid-row: 1 / span 2;   /* span 2 rows */
+    justify-self: center;          /* <-- keep on the right edge */
+    align-self: center;
+
+    max-width: 100%;
+    height: 500px;
+    
+    border-radius: 100px;
+    box-shadow: 0 0 20px rgba(0,239,0,.5); 
+}
+
+
